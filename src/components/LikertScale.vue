@@ -384,7 +384,7 @@ onBeforeMount(() => {
   if (qIDs.value.length === 0) {
     if (Array.isArray(props.questions) === false || props.questions.length === 0) {
       // throw new Error(
-      console.error(
+      console.error( // eslint-disable-line no-console
         'LikertScale component requires `question` attribute to be '
         + 'a non-empty array of objects containing a `id` property '
         + 'with a string value and a `label` property with a string '
@@ -397,8 +397,7 @@ onBeforeMount(() => {
           || props.questions[a].id.trim() === ''
           || props.questions[a].label.trim() === ''
         ) {
-          // throw new Error(
-          console.error(
+          console.error( // eslint-disable-line no-console
             'LikertScale component requires each item in the '
             + '`question` array to have a non-empty string '
             + '`id` property AND a non-empty string `label`. '
